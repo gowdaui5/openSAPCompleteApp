@@ -4,7 +4,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	function(Controller, MessageToast) {
 		Controller.extend("mine.controller.App", {
 			onPress: function() {
-				MessageToast.show("really you pressed me!");
+
+				var oBun = this.getView().getModel("i18n").getResourceBundle();
+				var sName = this.getView().getModel("helloPan").getProperty("/reciepient/name");
+				var sMsg = oBun.getText("MSG", [sName]);
+				MessageToast.show(sMsg);
 			}
 		});
 	});
