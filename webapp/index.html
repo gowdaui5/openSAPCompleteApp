@@ -8,8 +8,8 @@
         data-sap-ui-bindingSyntax="copmlex" data-sap-ui-resourceroots='{ "mine" : "./" }'></script>
         <script>
         	sap.ui.getCore().attachInit(function(){
-        		sap.ui.core.mvc.XMLView("",{
-        			viewName:"mine.view.App"
+        		new sap.ui.core.ComponentContainer({
+        			name:"mine"
         		}).placeAt("content");
         	});
         </script>

@@ -1,5 +1,5 @@
 <mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="mine.controller.App">
-	<Carousel>
+	<Carousel loop="true">
 		<pages>
 			<Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMs6qz4zq9nwJYhbOToeih3dg82m719WurbYW0KjIRyUb_0tWF3g"></Image>
 			<Image
