@@ -14,7 +14,9 @@
 						</pages>
 					</Carousel>
 					<Button text="{i18n>BTX}" press="onPress"></Button>
-					<Input value="{helloPan>/reciepient/name}" width="50%" valueLiveUpdate="true" description="Hello {helloPan>/reciepient/name}"></Input>
+					<Input
+						value="{ path:'helloPan>/reciepient/amount', type:'sap.ui.model.type.Float', formatOptions:{ minFractionDigits: 2}, contraints:{maximum:3000 } }"
+						width="50%" valueLiveUpdate="true" description="Hello {helloPan>/reciepient/amount}" editable="true"></Input>
 				</content>
 			</IconTabFilter>
 			<IconTabFilter text="Container and layouts">
@@ -57,8 +59,9 @@
 				<content>
 					<List items="{/ProductSet}">
 						<items>
-							<ObjectListItem intro="{ProductID}" number="{Price}" numberState="{= ${Price} > 500 ? 'Error' : 'Success' }" numberUnit="{CurrencyCode}"
-								title="{Category}">
+							<ObjectListItem intro="{ProductID}"
+								number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], formatOptions:{ showMeasure:true, currencyCode:false}, type:'sap.ui.model.type.Currency' }"
+								numberState="{= ${Price} > 500 ? 'Error' : 'Success' }" title="{Category}">
 								<firstStatus>
 									<ObjectStatus text="{ parts:[ { path : 'WeightMeasure'}, { path: 'WeightUnit'} ], formatter: '.formatter.onStateChar' }"></ObjectStatus>
 								</firstStatus>
