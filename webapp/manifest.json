@@ -50,6 +50,10 @@
 		 	"type": "sap.ui.model.json.JSONModel",
 		 	"uri":"model/localData.json"
 		 },
+		 "address":{
+		   "type":"sap.ui.model.json.JSONModel",
+		   "uri":"model/address.json"
+		 },
 		 "i18n":{
 		 	"type":"sap.ui.model.resource.ResourceModel",
 		 	"settings":{
