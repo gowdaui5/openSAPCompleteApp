@@ -53,6 +53,15 @@
 					</Toolbar>
 				</content>
 			</IconTabFilter>
+			<IconTabFilter text="Product List">
+				<content>
+					<List items="{/ProductSet}">
+						<items>
+							<ObjectListItem intro="{ProductID}" number="{Price}" numberUnit="{CurrencyCode}" title="{Category}"></ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</IconTabFilter>
 		</items>
 	</IconTabBar>
 </mvc:View>

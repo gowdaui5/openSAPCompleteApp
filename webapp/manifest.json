@@ -9,6 +9,15 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources":{
+			"ES5":{
+				"uri":"/destinations/ES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type":"OData",
+				"settings":{
+					"odataVersion":"2.0"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -59,6 +68,9 @@
 		 	"settings":{
 		 		"bundleName":"mine.i18n.i18n"
 		 	}
+		 },
+		 "":{
+		 	"dataSource":"ES5"
 		 }
 		},
 		"contentDensities": {

@@ -1,0 +1,12 @@
+{
+	"routes": [{
+			"path": "/destinations/ES5",
+			"target": {
+				"type": "destination",
+				"name": "ES5"
+			},
+			"description": "ES5"
+		}
+
+	]
+}
