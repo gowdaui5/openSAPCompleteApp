@@ -2,6 +2,26 @@
 	controllerName="mine.controller.App">
 	<IconTabBar>
 		<items>
+			<IconTabFilter text="Product List">
+				<content>
+					<Toolbar>
+						<Title text="Products"/>
+						<ToolbarSpacer/>
+						<SearchField width="40%" search="onSearch" liveChange="onLiveChange"></SearchField>
+					</Toolbar>
+					<List items="{ path:'/ProductSet', sorter:{path:'Category', group:true}}" id="idList">
+						<items>
+							<ObjectListItem intro="{ProductID}"
+								number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], formatOptions:{ showMeasure:true, currencyCode:false}, type:'sap.ui.model.type.Currency' }"
+								numberState="{= ${Price} > 500 ? 'Error' : 'Success' }" title="{Category}">
+								<firstStatus>
+									<ObjectStatus text="{ parts:[ { path : 'WeightMeasure'}, { path: 'WeightUnit'} ], formatter: '.formatter.onStateChar' }"></ObjectStatus>
+								</firstStatus>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</IconTabFilter>
 			<IconTabFilter text="Carousel">
 				<content>
 					<Carousel loop="true">
@@ -53,21 +73,6 @@
 						<Button text="{i18n>Save}" icon="sap-icon://save"></Button>
 						<Button text="{i18n>Edit}" icon="sap-icon://edit"></Button>
 					</Toolbar>
-				</content>
-			</IconTabFilter>
-			<IconTabFilter text="Product List">
-				<content>
-					<List items="{/ProductSet}">
-						<items>
-							<ObjectListItem intro="{ProductID}"
-								number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], formatOptions:{ showMeasure:true, currencyCode:false}, type:'sap.ui.model.type.Currency' }"
-								numberState="{= ${Price} > 500 ? 'Error' : 'Success' }" title="{Category}">
-								<firstStatus>
-									<ObjectStatus text="{ parts:[ { path : 'WeightMeasure'}, { path: 'WeightUnit'} ], formatter: '.formatter.onStateChar' }"></ObjectStatus>
-								</firstStatus>
-							</ObjectListItem>
-						</items>
-					</List>
 				</content>
 			</IconTabFilter>
 		</items>
