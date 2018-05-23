@@ -1,8 +1,10 @@
 sap.ui.define(["sap/ui/core/mvc/Controller",
-		"sap/m/MessageToast"
+		"sap/m/MessageToast",
+		"mine/model/formatter"
 	],
-	function(Controller, MessageToast) {
+	function(Controller, MessageToast, formatter) {
 		Controller.extend("mine.controller.App", {
+			formatter: formatter,
 			onPress: function() {
 
 				var oBun = this.getView().getModel("i18n").getResourceBundle();
