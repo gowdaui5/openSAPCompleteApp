@@ -16,6 +16,9 @@ sap.ui.define([], function() {
 			}
 
 			return sText;
+		},
+		getMapBack: function(img) {
+
 		}
 	};
 });

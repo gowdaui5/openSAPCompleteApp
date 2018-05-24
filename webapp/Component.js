@@ -6,6 +6,7 @@ sap.ui.define(["sap/ui/core/UIComponent"],
 			},
 			init: function() {
 				UIComponent.prototype.init.apply(this, arguments);
+				this.getModel().setUseBatch(false);
 			}
 		});
 	});
