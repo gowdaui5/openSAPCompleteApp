@@ -37,6 +37,12 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					oVal
 				));
 				oList.filter(bFilter);
+			},
+			onSelChange: function(oEvent) {
+				var oSel = oEvent.getParameter("listItem").getBindingContext().getPath();
+				var oPan = this.byId("idPanel");
+				oPan.bindElement(oSel);
+				oPan.setVisible(true);
 			}
 		});
 	});
