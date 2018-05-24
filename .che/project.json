@@ -1,1 +1,1 @@
-{"type":"sap.web","builders":{"configs":{}},"runners":{"configs":{}},"attributes":{},"mixinTypes":[]}
+{"type":"sap.web","builders":{"configs":{}},"runners":{"configs":{}},"attributes":{"sap.watt.common.setting":["{\"hcpdeploy\":{\"account\":\"p1942798422trial\",\"name\":\"opensap1\",\"lastVersionWeTriedToDeploy\":\"1.0.0\"}}"]},"mixinTypes":[]}
